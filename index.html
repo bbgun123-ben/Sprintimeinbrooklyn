@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spring Time in Brooklyn — Made-to-Order</title>
+  <meta name="description" content="Made-to-order, not mass-made — crafted for your order to reduce waste." />
+  <meta property="og:title" content="Spring Time in Brooklyn — Made-to-Order" />
+  <meta property="og:description" content="See a piece you love? We make it for your order — minimizing waste and maximizing fit." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top/Nav -->
+  <header class="topbar">
+    <div class="container nav">
+      <a class="nav-link" href="https://www.instagram.com/springtimeinbrooklyn/" target="_blank" rel="noreferrer">Instagram</a>
+      <div class="brand">Spring Time in Brooklyn</div>
+      <a class="nav-link" href="mailto:orders@springtimeinbrooklyn.com">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="container hero" id="top">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="headline">Made-to-order silhouettes for everyday romance</h1>
+        <p class="lead">See a piece you love? We make it for your order — minimizing waste and maximizing fit.</p>
+        <div class="cta-row">
+          <a href="#gallery" class="btn btn-outline">Shop the gallery</a>
+          <a href="#order" class="btn btn-accent">Start an order</a>
+        </div>
+      </div>
+      <div class="hero-collage">
+        <div class="tile img-1" aria-hidden="true"></div>
+        <div class="tile img-5" aria-hidden="true"></div>
+        <div class="tile img-8" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters / Search -->
+  <section class="container controls">
+    <div class="filters" role="tablist" aria-label="Filter by tag">
+      <button class="chip" data-tag="all" aria-selected="true">all</button>
+      <button class="chip" data-tag="tops">tops</button>
+      <button class="chip" data-tag="dresses">dresses</button>
+      <button class="chip" data-tag="ivory">ivory</button>
+      <button class="chip" data-tag="white">white</button>
+      <button class="chip" data-tag="black">black</button>
+      <button class="chip" data-tag="silver">silver</button>
+      <button class="chip" data-tag="blush">blush</button>
+      <button class="chip" data-tag="lifestyle">lifestyle</button>
+    </div>
+    <label class="search">
+      <span class="sr-only">Search</span>
+      <input id="searchInput" type="search" placeholder="Search pieces, notes…" />
+    </label>
+  </section>
+
+  <!-- Gallery (pre-rendered; images via CSS classes) -->
+  <main id="main" class="container gallery" aria-live="polite">
+    <article class="card product" data-tags="tops ivory romantic">
+      <button class="media" data-index="1" aria-label="Ivory blouse with ruffle collar">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-1"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Ivory blouse with ruffle collar</h3>
+        <p class="muted">Antique buttons, smocked cuffs.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="tops ivory">
+      <button class="media" data-index="2" aria-label="Ivory blouse — front view">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-2"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Ivory blouse — front view</h3>
+        <p class="muted">Clean front, gentle A-line.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="tops lifestyle">
+      <button class="media" data-index="3" aria-label="Ivory blouse lifestyle">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-3"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Ivory blouse lifestyle</h3>
+        <p class="muted">Everyday wearable romance.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="tops ivory">
+      <button class="media" data-index="4" aria-label="Ivory blouse alt pose">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-4"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Ivory blouse alt pose</h3>
+        <p class="muted">Soft structure, ruffle collar.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="dresses silver">
+      <button class="media" data-index="5" aria-label="Silver puff-sleeve dress">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-5"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Silver puff-sleeve dress</h3>
+        <p class="muted">Liquid-silver midi, ruffle hem.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="dresses white">
+      <button class="media" data-index="6" aria-label="White zip-front day dress">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-6"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">White zip-front day dress</h3>
+        <p class="muted">Pockets, structured waist.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="dresses black">
+      <button class="media" data-index="7" aria-label="Black day dress">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-7"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Black day dress</h3>
+        <p class="muted">Gold zipper, shirred waist.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+
+    <article class="card product" data-tags="tops blush">
+      <button class="media" data-index="8" aria-label="Sheer smocked blouse">
+        <div class="badge">Made-to-order</div>
+        <div class="photo img-8"></div>
+      </button>
+      <div class="meta">
+        <h3 class="title">Sheer smocked blouse</h3>
+        <p class="muted">Blush, airy sleeves, ribbon tie.</p>
+        <a class="btn btn-accent small" href="#order">Order this piece</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- About -->
+  <section class="container about" id="about">
+    <div class="about-grid">
+      <div>
+        <h2>About</h2>
+        <p class="lead">Made-to-order, not mass-made — crafted for your order to reduce waste.</p>
+        <p>We design and sew each piece to order. Choose a silhouette you love, then we tailor it for you — minimizing waste and maximizing fit. Thoughtful fabrics, timeless lines, and slow-fashion ethics.</p>
+      </div>
+      <aside class="card facts">
+        <h3>Quick facts</h3>
+        <ul>
+          <li>Size-inclusive, custom fit</li>
+          <li>Timeless silhouettes</li>
+          <li>Natural fabrics available</li>
+          <li>Made in Brooklyn, NY</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section class="container order" id="order">
+    <div class="order-grid">
+      <div>
+        <h2>Start your order</h2>
+        <p>Send a brief note with the piece you want (paste link or name), your size range, and timing. We’ll reply with fabric options and next steps.</p>
+        <a class="btn btn-accent" href="mailto:orders@springtimeinbrooklyn.com?subject=Made-to-order%20request">Email request</a>
+      </div>
+      <aside class="card">
+        <h3>Policies</h3>
+        <ul>
+          <li>Typical turnaround 2–4 weeks</li>
+          <li>Measurement guide provided after request</li>
+          <li>Worldwide tracked shipping</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div>
+        <strong>Spring Time in Brooklyn</strong>
+        <span class="dot">•</span>
+        <a href="https://www.instagram.com/springtimeinbrooklyn/" target="_blank" rel="noreferrer">@springtimeinbrooklyn</a>
+      </div>
+      <a href="mailto:orders@springtimeinbrooklyn.com">orders@springtimeinbrooklyn.com</a>
+    </div>
+    <div class="copyright">© <span id="year"></span> Spring Time in Brooklyn. All rights reserved.</div>
+  </footer>
+
+  <!-- Lightbox (uses computed CSS background as source) -->
+  <div id="lightbox" class="lightbox" aria-modal="true" role="dialog" hidden>
+    <div class="lightbox-content" role="document">
+      <button class="close" aria-label="Close">×</button>
+      <img id="lightboxImg" alt="" />
+      <div class="lightbox-caption">
+        <p id="lightboxTitle"></p>
+        <p id="lightboxText" class="muted"></p>
+        <a href="#order" class="btn btn-outline small">Order this piece</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Defensive JS: filters and lightbox; page is fully usable without JS.
+  (function(){
+    const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+    const $ = (sel, ctx=document) => ctx.querySelector(sel);
+    const searchInput = $("#searchInput");
+    const chips = $$(".chip");
+    const cards = $$(".product");
+    let activeTag = "all";
+
+    function matchesQuery(card, q){
+      if(!q) return true;
+      const t = q.toLowerCase();
+      const title = card.querySelector('.title')?.textContent?.toLowerCase() || '';
+      const cap = card.querySelector('.muted')?.textContent?.toLowerCase() || '';
+      const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+      return title.includes(t) || cap.includes(t) || tags.includes(t);
+    }
+
+    function applyFilters(){
+      const q = (searchInput && searchInput.value || '').trim();
+      cards.forEach(card => {
+        const tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+        const tagOk = (activeTag === 'all') || tags.includes(activeTag);
+        const qOk = matchesQuery(card, q);
+        card.style.display = (tagOk && qOk) ? '' : 'none';
+      });
+      chips.forEach(c => c.setAttribute('aria-selected', c.dataset.tag === activeTag ? 'true' : 'false'));
+    }
+
+    chips.forEach(c => c.addEventListener('click', () => { activeTag = c.dataset.tag; applyFilters(); }));
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+
+    // Lightbox: read CSS background from clicked .photo and set <img src="data:...">
+    const lb = $("#lightbox");
+    const lbImg = $("#lightboxImg");
+    const lbTitle = $("#lightboxTitle");
+    const lbText = $("#lightboxText");
+    function openLB(btn){
+      const card = btn.closest('.product');
+      const photo = btn.querySelector('.photo');
+      const style = window.getComputedStyle(photo);
+      const bg = style.backgroundImage; // e.g., url("data:image/jpeg;base64,...")
+      const match = bg && bg.startsWith('url(') ? bg.slice(4, -1).replace(/^"|"$/g,'') : '';
+      lbImg.src = match || '';
+      lbImg.alt = card?.querySelector('.title')?.textContent || '';
+      lbTitle.textContent = card?.querySelector('.title')?.textContent || '';
+      lbText.textContent = card?.querySelector('.muted')?.textContent || '';
+      lb.hidden = false; document.body.style.overflow = 'hidden';
+    }
+    function closeLB(){ lb.hidden = true; document.body.style.overflow = ''; }
+
+    $$(".media").forEach(btn => btn.addEventListener('click', () => openLB(btn)));
+    document.querySelector('.lightbox .close').addEventListener('click', closeLB);
+    document.querySelector('#lightbox').addEventListener('click', (e)=>{ if(e.target.id==='lightbox') closeLB(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !lb.hidden) closeLB(); });
+
+    // Year
+    const yearEl = document.getElementById("year"); if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+    applyFilters();
+  })();
+  </script>
+</body>
+</html>

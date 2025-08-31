@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spring Time in Brooklyn — Made‑to‑Order</title>
+  <meta name="description" content="Made‑to‑order, not mass‑made — crafted for your order to reduce waste." />
+  <meta property="og:title" content="Spring Time in Brooklyn — Made‑to‑Order" />
+  <meta property="og:description" content="See a piece you love? We make it for your order — minimizing waste and maximizing fit." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="images/Facetune_05-04-2024-14-58-35_VSCO.JPG" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top/Nav -->
+  <header class="topbar">
+    <div class="container nav">
+      <a class="nav-link" href="https://www.instagram.com/spingtimeinbrooklyn/" target="_blank" rel="noreferrer">Instagram</a>
+      <div class="brand">Spring Time in Brooklyn</div>
+      <a class="nav-link" href="mailto:orders@springtimeinbrooklyn.com">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="container hero" id="top">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="headline">Made‑to‑order silhouettes for everyday romance</h1>
+        <p class="lead">See a piece you love? We make it for your order — minimizing waste and maximizing fit.</p>
+        <div class="cta-row">
+          <a href="#gallery" class="btn btn-outline">Shop the gallery</a>
+          <a href="#order" class="btn btn-accent">Start an order</a>
+        </div>
+      </div>
+      <div class="hero-collage">
+        <div class="tile"><img src="images/Facetune_05-04-2024-14-58-35_VSCO.JPG" alt="Ivory blouse with ruffle collar" /></div>
+        <div class="tile"><img src="images/IMG_9564.jpeg" alt="Silver puff‑sleeve dress" /></div>
+        <div class="tile"><img src="images/IMG_9577.jpeg" alt="Sheer smocked blouse" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters / Search -->
+  <section class="container controls">
+    <div class="filters" role="tablist" aria-label="Filter by tag">
+      <!-- Buttons are created by JS based on tags -->
+    </div>
+    <label class="search">
+      <span class="sr-only">Search</span>
+      <input id="searchInput" type="search" placeholder="Search pieces, notes…" />
+    </label>
+  </section>
+
+  <!-- Gallery -->
+  <main id="main" class="container gallery" aria-live="polite">
+    <!-- Cards are populated by JS from the POSTS array -->
+  </main>
+
+  <!-- About -->
+  <section class="container about" id="about">
+    <div class="about-grid">
+      <div>
+        <h2>About</h2>
+        <p class="lead">Made‑to‑order, not mass‑made — crafted for your order to reduce waste.</p>
+        <p>We design and sew each piece to order. Choose a silhouette you love, then we tailor it for you — minimizing waste and maximizing fit. Thoughtful fabrics, timeless lines, and slow‑fashion ethics.</p>
+      </div>
+      <aside class="card facts">
+        <h3>Quick facts</h3>
+        <ul>
+          <li>Size‑inclusive, custom fit</li>
+          <li>Timeless silhouettes</li>
+          <li>Natural fabrics available</li>
+          <li>Made in Brooklyn, NY</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section class="container order" id="order">
+    <div class="order-grid">
+      <div>
+        <h2>Start your order</h2>
+        <p>Send a brief note with the piece you want (paste link or name), your size range, and timing. We’ll reply with fabric options and next steps.</p>
+        <a class="btn btn-accent" href="mailto:orders@springtimeinbrooklyn.com?subject=Made-to-order%20request">Email request</a>
+      </div>
+      <aside class="card">
+        <h3>Policies</h3>
+        <ul>
+          <li>Typical turnaround 2–4 weeks</li>
+          <li>Measurement guide provided after request</li>
+          <li>Worldwide tracked shipping</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div>
+        <strong>Spring Time in Brooklyn</strong>
+        <span class="dot">•</span>
+        <a href="https://www.instagram.com/spingtimeinbrooklyn/" target="_blank" rel="noreferrer">@spingtimeinbrooklyn</a>
+      </div>
+      <a href="mailto:orders@springtimeinbrooklyn.com">orders@springtimeinbrooklyn.com</a>
+    </div>
+    <div class="copyright">© <span id="year"></span> Spring Time in Brooklyn. All rights reserved.</div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-modal="true" role="dialog" hidden>
+    <div class="lightbox-content" role="document">
+      <button class="close" aria-label="Close">×</button>
+      <img id="lightboxImg" alt="" />
+      <div class="lightbox-caption">
+        <p id="lightboxTitle"></p>
+        <p id="lightboxText" class="muted"></p>
+        <a href="#order" class="btn btn-outline small">Order this piece</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // ---------- Data (paths assume /images in your repo root) ----------
+  const POSTS = [
+    { src: "images/Facetune_05-04-2024-14-58-35_VSCO.JPG", alt: "Ivory blouse with ruffle collar", caption: "Antique buttons, smocked cuffs.", tags: ["tops","ivory"] },
+    { src: "images/Facetune_05-04-2024-14-59-26_VSCO.JPG", alt: "Ivory blouse — front view", caption: "Clean front, gentle A‑line.", tags: ["tops","ivory"] },
+    { src: "images/Facetune_05-04-2024-15-00-48_VSCO.JPG", alt: "Ivory blouse lifestyle", caption: "Everyday wearable romance.", tags: ["tops","lifestyle"] },
+    { src: "images/Facetune_05-04-2024-15-02-07_VSCO.JPG", alt: "Ivory blouse alt pose", caption: "Soft structure, ruffle collar.", tags: ["tops","ivory"] },
+    { src: "images/IMG_9564.jpeg", alt: "Silver puff‑sleeve dress", caption: "Liquid‑silver midi, ruffle hem.", tags: ["dresses","silver"] },
+    { src: "images/IMG_9570.jpeg", alt: "White zip‑front day dress", caption: "Pockets, structured waist.", tags: ["dresses","white"] },
+    { src: "images/IMG_9574.jpeg", alt: "Black day dress", caption: "Gold zipper, shirred waist.", tags: ["dresses","black"] },
+    { src: "images/IMG_9577.jpeg", alt: "Sheer smocked blouse", caption: "Blush, airy sleeves, ribbon tie.", tags: ["tops","blush"] }
+  ];
+
+  // ---------- Utilities ----------
+  const $ = (sel, ctx=document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+  const yearEl = $("#year"); yearEl.textContent = new Date().getFullYear();
+
+  function uniqueTags(items){
+    const s = new Set(); items.forEach(p => (p.tags||[]).forEach(t => s.add(t)));
+    return ["all", ...Array.from(s)];
+  }
+
+  // ---------- Filters & Search ----------
+  const filtersEl = $(".filters");
+  const searchInput = $("#searchInput");
+  let activeTag = "all";
+
+  function renderFilters(){
+    filtersEl.innerHTML = "";
+    uniqueTags(POSTS).forEach(tag => {
+      const btn = document.createElement("button");
+      btn.className = "chip";
+      btn.textContent = tag;
+      btn.setAttribute("role","tab");
+      btn.setAttribute("aria-selected", tag === activeTag ? "true" : "false");
+      btn.addEventListener("click", () => {
+        activeTag = tag;
+        renderFilters();
+        renderGallery();
+      });
+      filtersEl.appendChild(btn);
+    });
+  }
+
+  // ---------- Gallery ----------
+  const galleryEl = $(".gallery");
+
+  function matchesQuery(post, q){
+    if(!q) return true;
+    const t = q.toLowerCase();
+    return (post.alt||\"\").toLowerCase().includes(t)
+      || (post.caption||\"\").toLowerCase().includes(t)
+      || (post.tags||[]).some(tag => tag.toLowerCase().includes(t));
+  }
+
+  function renderGallery(){
+    const q = searchInput.value.trim();
+    const items = POSTS.filter(p => (activeTag === "all" || (p.tags||[]).includes(activeTag)) && matchesQuery(p, q));
+
+    galleryEl.innerHTML = items.map((p, i) => `
+      <article class="card product">
+        <button class="media" data-index="${i}" aria-label="${p.alt.replace(/\"/g, '&quot;')}">
+          <div class="badge">Made‑to‑order</div>
+          <img src="${p.src}" alt="${p.alt.replace(/\"/g, '&quot;')}" loading="lazy" />
+        </button>
+        <div class="meta">
+          <h3 class="title">${p.alt}</h3>
+          ${p.caption ? `<p class="muted">${p.caption}</p>` : ""}
+          <a class="btn btn-accent small" href="#order">Order this piece</a>
+        </div>
+      </article>
+    `).join("");
+
+    // Lightbox bindings
+    $$(".media", galleryEl).forEach(btn => {
+      btn.addEventListener("click", () => openLightbox(items[+btn.dataset.index]));
+    });
+  }
+
+  searchInput.addEventListener("input", renderGallery);
+
+  // ---------- Lightbox ----------
+  const lightbox = $("#lightbox");
+  const closeBtn = $(".close", lightbox);
+  const lightImg = $("#lightboxImg");
+  const lightTitle = $("#lightboxTitle");
+  const lightText = $("#lightboxText");
+
+  function openLightbox(item){
+    lightImg.src = item.src;
+    lightImg.alt = item.alt || "";
+    lightTitle.textContent = item.alt || "";
+    lightText.textContent = item.caption || "";
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function closeLightbox(){
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+  }
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener("keydown", (e) => { if(e.key === "Escape" && !lightbox.hidden) closeLightbox(); });
+
+  // Init
+  renderFilters();
+  renderGallery();
+  </script>
+</body>
+</html>
